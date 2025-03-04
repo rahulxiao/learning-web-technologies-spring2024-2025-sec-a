@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <title>Registration Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -24,31 +25,24 @@
                     <input type="text" id="lname" name="lname" required>
                 </div>
                 <div class="form-group">
-                    <label for="id">ID</label>
-                    <input type="number" id="id" name="id" required>
-                </div>
-                <div class="form-group">
                     <label for="email">E-Mail</label>
                     <input type="email" id="email" name="email" required>
                 </div>
                 <div class="form-group">
-                    <label for="pass">Password</label>
-                    <input type="password" id="pass" name="pass" required>
+                    <label for="phone">Phone Number</label>
+                    <input type="number" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="id">ID</label>
+                    <input type="number" id="id" name="id" required>
+                </div>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
                 </div>
                 <div class="form-group">
                     <label for="dob">Date of Birth</label>
                     <input type="date" id="dob" name="dob" required>
-                </div>
-                <div class="form-group">
-                    <label>Gender</label>
-                    <div class="radio-group">
-                        <input type="radio" id="male" name="gender" value="male">
-                        <label for="male">Male</label>
-                        <input type="radio" id="female" name="gender" value="female">
-                        <label for="female">Female</label>
-                        <input type="radio" id="other" name="gender" value="other">
-                        <label for="other">Other</label>
-                    </div>
                 </div>
             </fieldset>
 
@@ -73,37 +67,12 @@
                 </div>
             </fieldset>
 
-            <!-- Department -->
-            <fieldset>
-                <legend>Department</legend>
-                <div class="form-group">
-                    <label for="dep">Department</label>
-                    <select id="dep" name="dep" required>
-                        <option value="cse">CSE</option>
-                        <option value="eee">EEE</option>
-                        <option value="bba">BBA</option>
-                        <option value="eng">English</option>
-                    </select>
-                </div>
-            </fieldset>
-
-            <!-- Additional Information -->
-            <fieldset>
-                <legend>Additional Information</legend>
-                <div class="form-group">
-                    <label for="image">Upload an Image</label>
-                    <input type="file" id="image" name="image">
-                </div>
-                <div class="form-group">
-                    <label for="add">Address</label>
-                    <textarea id="add" name="add" rows="4" cols="30" required></textarea>
-                </div>
-            </fieldset>
-
             <!-- Form Actions -->
             <div class="form-actions">
                 <input type="submit" value="Submit">
                 <input type="reset" value="Reset">
+                <a href="login.html" class="btn login-btn">Login</a>
+                <a href="home.html" class="btn home-btn">Home</a>
             </div>
         </form>
     </div>
