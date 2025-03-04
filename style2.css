@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(90deg, #0d0d0d, #1a1a1a);
+    color: #00ffcc;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    border-bottom: 2px solid #ff00ff;
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+}
+
+/* Navigation Links */
+.nav-links a {
+    color: #ff00ff;
+    text-decoration: none;
+    margin-left: 2rem;
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+
+.nav-links a:hover {
+    text-shadow: 0 0 15px #ff00ff;
+    color: #ffffff;
+}
+
+/* Authentication Buttons */
+.auth-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    border: 2px solid;
+}
+
+.join-btn {
+    background-color: transparent;
+    color: #00ffcc;
+    border-color: #00ffcc;
+    box-shadow: 0 0 10px #00ffcc;
+}
+
+.join-btn:hover {
+    background-color: #00ffcc;
+    color: #0d0d0d;
+    box-shadow: 0 0 20px #00ffcc;
+}
+
+.login-btn {
+    background-color: transparent;
+    color: #ff00ff;
+    border-color: #ff00ff;
+    box-shadow: 0 0 10px #ff00ff;
+}
+
+.login-btn:hover {
+    background-color: #ff00ff;
+    color: #0d0d0d;
+    box-shadow: 0 0 20px #ff00ff;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('https://img.freepik.com/free-photo/futuristic-moon-background_23-2150930768.jpg?t=st=1741112906~exp=1741116506~hmac=65819ed356e30e77c6e6359afbd1382c90284a6a686af4d9afc196c4488d5531&w=1060') no-repeat center center / cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 1rem;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    color: #ffffff;
+    text-shadow: 0 0 15px #ff00ff, 0 0 30px #ff00ff;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    padding: 1rem 2rem;
+    background-color: transparent;
+    color: #ffffff;
+    text-decoration: none;
+    border: 2px solid #ff00ff;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    box-shadow: 0 0 15px #ff00ff;
+    transition: all 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #ff00ff;
+    box-shadow: 0 0 25px #ff00ff;
+}
+
+/* Features Section */
+.features {
+    min-height: 60vh; /* Ensures it has a visible height */
+    background: linear-gradient(45deg, #0d0d0d, #1a1a1a); /* Gradient background */
+    position: relative;
+    padding: 4rem 2rem; /* Consistent padding */
+    margin: 0; /* Remove margins to fill space */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    z-index: 1;
+    overflow: hidden; /* Prevents overflow of pseudo-elements */
+}
+
+/* Cyberpunk Grid Background */
+.features:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(to right, rgba(255, 0, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 255, 204, 0.1) 1px, transparent 1px);
+    background-size: 40px 40px; /* Grid size */
+    opacity: 0.8;
+    z-index: 0; /* Behind feature cards */
+    animation: glitch-grid 10s infinite linear;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(26, 26, 26, 0.9);
+    border: 1px solid #00ffcc;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.3);
+    transition: all 0.3s;
+    position: relative;
+    z-index: 2; /* Above background effects */
+}
+
+.feature-card:hover {
+    box-shadow: 0 0 25px rgba(0, 255, 204, 0.7);
+    transform: translateY(-5px);
+}
+
+.feature-card h3 {
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
+    margin-bottom: 1rem;
+}
+
+.feature-card p {
+    color: #ffffff;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(90deg, #0d0d0d, #1a1a1a);
+    color: #00ffcc;
+    text-align: center;
+    padding: 2rem;
+    border-top: 2px solid #ff00ff;
+    text-shadow: 0 0 10px #00ffcc;
+    position: relative;
+    z-index: 1;
+}
+
+/* Glitch Animation for Grid */
+@keyframes glitch-grid {
+    0% { transform: translate(0, 0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(2px, -2px); }
+    60% { transform: translate(-1px, 1px); }
+    80% { transform: translate(1px, -1px); fide;}
+    100% { transform: translate(0, 0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .features {
+        grid-template-columns: 1fr;
+        padding: 2rem 1rem;
+    }
+    
+    .nav-links, .auth-buttons {
+        display: none;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+    
+    .hero {
+        padding-top: 60px;
+    }
+}
