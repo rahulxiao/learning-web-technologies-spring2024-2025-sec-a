@@ -1,5 +1,13 @@
 h2{
-    color: red;
-    font-size: 40px;
-    
+    text-align: center;
+    color: #ff00ff; /* Neon magenta */
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    text-shadow: 0 0 15px #ff00ff; /* Glowing effect */
+    text-transform: uppercase;
+}
+form{
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
