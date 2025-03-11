@@ -9,63 +9,96 @@
 <body>
     <h2>Online Registration Form</h2>
     <form action="#" method="post">
-        <label for="fullname">Full Name:</label>
-        <input type="text" id="fullname" name="fullname" required><br><br>
-        
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
-        
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
-        
-        <label for="dob">Date of Birth:</label>
-        <input type="date" id="dob" name="dob" required><br><br>
-        
-        <label>Gender:</label><br>
-        <input type="radio" id="male" name="gender" value="male" required>
-        <label for="male">Male</label>
-        <input type="radio" id="female" name="gender" value="female" required>
-        <label for="female">Female</label>
-        <input type="radio" id="other" name="gender" value="other" required>
-        <label for="other">Other</label>
-        <br><br>
-        
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" required><br><br>
-        
-        <label for="address">Address:</label><br>
-        <textarea id="address" name="address" rows="4" cols="30" required></textarea><br><br>
-        
-        <label for="dept">Department:</label>
-        <select id="dept" name="dept">
-            <option value="CSE">CSE</option>
-            <option value="EEE">CS</option>
-            <option value="Cyber Security">Cyber Security</option>
-            <option value="Other">Other</option>
-        </select><br><br>
+        <table border="1">
+            <tr>
+                <td><label for="fname">First Name:</label></td>
+                <td><input type="text" id="fname" name="fname" required></td>
+            </tr>
+            <tr>
+                <td><label for="lname">Last Name:</label></td>
+                <td><input type="text" id="lname" name="lname" required></td>
+            </tr> 
+            <tr>
+                <td><label for="id">ID:</label></td>
+                <td><input type="number" id="id" name="id" required></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" id="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td><label for="password">Password:</label></td>
+                <td><input type="password" id="password" name="password" required></td>
+            </tr>
+            <tr>
+                <td><label for="dob">Date of Birth:</label></td>
+                <td><input type="date" id="dob" name="dob" required></td>
+            </tr>
+            <tr>
+                <td><label>Gender:</label></td>
+                <td>
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Male</label>
 
-        <label>Skills:</label><br>
-        <input type="checkbox" id="html" name="skills" value="HTML">
-        <label for="html">HTML</label>
-        <input type="checkbox" id="css" name="skills" value="CSS">
-        <label for="css">CSS</label>
-        <input type="checkbox" id="javascript" name="skills" value="JavaScript">
-        <label for="javascript">JavaScript</label>
-        <input type="checkbox" id="python" name="skills" value="Python">
-        <label for="python">Python</label>
-        <input type="checkbox" id="java" name="skills" value="Java">
-        <label for="java">Java</label>
-        <br><br>
-        
-        <label for="terms">
-            <input type="checkbox" id="terms" name="terms" required>
-            I agree to the terms and conditions
-        </label><br><br>
-        
-        <input type="submit" value="Register">
-        <input type="reset" value="Reset">
-        <input type="button" value="Button">
+                    <input type="radio" id="female" name="gender" value="female" required>
+                    <label for="female">Female</label>
 
+                    <input type="radio" id="other" name="gender" value="other" required>
+                    <label for="other">Other</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="phone">Phone Number:</label></td>
+                <td><input type="tel" id="phone" name="phone" required></td>
+            </tr>
+            <tr>
+                <td><label for="address">Address:</label></td>
+                <td><textarea id="address" name="address" rows="4" cols="30" required></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="dept">Department:</label></td>
+                <td>
+                    <select id="dept" name="dept">
+                        <option value="CSE">CSE</option>
+                        <option value="EEE">EEE</option>
+                        <option value="Cyber Security">Cyber Security</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Skills:</label></td>
+                <td>
+                    <input type="checkbox" id="html" name="skills" value="HTML">
+                    <label for="html">HTML</label>
+
+                    <input type="checkbox" id="css" name="skills" value="CSS">
+                    <label for="css">CSS</label>
+
+                    <input type="checkbox" id="javascript" name="skills" value="JavaScript">
+                    <label for="javascript">JavaScript</label>
+
+                    <input type="checkbox" id="python" name="skills" value="Python">
+                    <label for="python">Python</label>
+
+                    <input type="checkbox" id="java" name="skills" value="Java">
+                    <label for="java">Java</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to the terms and conditions</label>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Register">
+                    <input type="reset" value="Reset">
+                    <input type="button" value="Login">
+                </td>
+            </tr>
+        </table>
     </form>
 </body>
 </html>
