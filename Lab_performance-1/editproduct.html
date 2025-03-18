@@ -9,33 +9,38 @@
   <body>
     <form>
       <fieldset>
-        <legend>Edit Product</legend>
+        <legend>EDIT PRODUCT</legend>
         <table border="0">
           <tr>
             <td>
-              <label for="name">Name:</label><br />
+              <label for="name">Name:</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
               <input type="name" id="name" name="name" required />
             </td>
-            <br />
+          </tr>
+          <tr>
+            <td><label for="buyprice">Buying Price:</label></td>
           </tr>
           <tr>
             <td>
-              <label for="buyprice">Buying Price:</label><br />
               <input type="buyprice" id="buyprice" name="buyprice" required />
             </td>
-            <br />
           </tr>
           <tr>
             <td>
-              <label for="sellprice">Selling Price:</label><br />
-              <input
-                type="sellprice"
-                id="sellprice"
-                name="sellprice"
-                required
-              />
+              <label for="sellprice">Selling Price:</label>
             </td>
-            <br />
+          </tr>
+          <tr>
+            <td>
+              <input type="sellprice" id="sellprice" name="sellprice" required />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4"><hr /></td>
           </tr>
           <tr>
             <td colspan="2">
@@ -46,11 +51,9 @@
           <tr>
             <td colspan="4"><hr /></td>
           </tr>
+
           <tr>
-            <td>
-              <hr />
-              <button>Save</button>
-            </td>
+            <td><button>Save</button></td>
           </tr>
         </table>
       </fieldset>
