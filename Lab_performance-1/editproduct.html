@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Product</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>Edit Product</legend>
+        <table border="0">
+          <tr>
+            <td>
+              <label for="name">Name:</label><br />
+              <input type="name" id="name" name="name" required />
+            </td>
+            <br />
+          </tr>
+          <tr>
+            <td>
+              <label for="buyprice">Buying Price:</label><br />
+              <input type="buyprice" id="buyprice" name="buyprice" required />
+            </td>
+            <br />
+          </tr>
+          <tr>
+            <td>
+              <label for="sellprice">Selling Price:</label><br />
+              <input
+                type="sellprice"
+                id="sellprice"
+                name="sellprice"
+                required
+              />
+            </td>
+            <br />
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="checkbox" id="display" name="display" value="HTML" />
+              <label for="html">Display</label>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4"><hr /></td>
+          </tr>
+          <tr>
+            <td>
+              <hr />
+              <button>Save</button>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+    </form>
+  </body>
+</html>
