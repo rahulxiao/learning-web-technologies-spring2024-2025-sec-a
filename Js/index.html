@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form</title>
     <style>
-       table {
+        table {
             margin: 50px auto;
             border-collapse: collapse;
             width: 100%;
@@ -30,18 +30,27 @@
         button:hover {
             background: #0056b3;
         }
+        .error-message {
+            color: red;
+            text-align: center;
+        }
+        .success-message {
+            color: green;
+            text-align: center;
+        }
     </style>
+    
 </head>
 <body>
-    <form action="home.html" onsubmit="return validate()">
+    <form onsubmit="validateLogin(event)">
         <table border="0">
             <tr>
                 <td>Username:</td>
-                <td><input type="text" id="username" name="username" required></td>
+                <td><input type="text" id="username" required></td>
             </tr>
-            <tr> 
+            <tr>
                 <td>Password:</td>
-                <td><input type="password" id="password" name="password" required></td>
+                <td><input type="password" id="password" required></td>
             </tr>
             <tr>
                 <td colspan="2" style="text-align: center;">
@@ -50,27 +59,25 @@
             </tr>
         </table>
     </form>
-    <p id="vmsg"></p>
+    <p id="message"></p>
     <script>
-        function validate() {
-    let username = document.getElementById("username").value;
-    let password = document.getElementById("password").value;
-    let errorMessage = "";
-
-    if (username === "" || password === "") {
-        errorMessage = "Username and password cannot be empty!";
-    } else if (username !== password) {
-        errorMessage = "Username and password must be the same!";
-    }
-
-    if (errorMessage) {
-        alert(errorMessage);
-        return false; // Prevent form submission
-    }
-
-    alert("Login successful!");
-    return true; // Allow form submission
-}
+        function validateLogin(event) {
+            event.preventDefault(); // Prevent form submission
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            let message = document.getElementById("message");
+            
+            if (!username || !password) {
+                message.innerHTML = "Username and password cannot be empty!";
+                message.className = "error-message";
+            } else if (username === password) {
+                message.innerHTML = "Login successful!";
+                message.className = "success-message";
+            } else {
+                message.innerHTML = "Invalid credentials! Username and password must be the same.";
+                message.className = "error-message";
+            }
+        }
     </script>
 </body>
 </html>
