@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+       table {
+            margin: 50px auto;
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 300px;
+        }
+        td {
+            padding: 8px;
+        }
+        input, button {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        button {
+            background: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <form action="home.html" onsubmit="return validate()">
+        <table border="0">
+            <tr>
+                <td>Username:</td>
+                <td><input type="text" id="username" name="username" required></td>
+            </tr>
+            <tr> 
+                <td>Password:</td>
+                <td><input type="password" id="password" name="password" required></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <button type="submit">Login</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <p id="vmsg"></p>
+    <script>
+        function validate() {
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+    let errorMessage = "";
+
+    if (username === "" || password === "") {
+        errorMessage = "Username and password cannot be empty!";
+    } else if (username !== password) {
+        errorMessage = "Username and password must be the same!";
+    }
+
+    if (errorMessage) {
+        alert(errorMessage);
+        return false; // Prevent form submission
+    }
+
+    alert("Login successful!");
+    return true; // Allow form submission
+}
+    </script>
+</body>
+</html>
