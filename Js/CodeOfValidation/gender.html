@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gender Validation</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/validation.js"></script>
+</head>
+<body>
+    <form onsubmit="return validateGender()">
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male"> Male
+        <input type="radio" id="female" name="gender" value="female"> Female
+        <input type="radio" id="other" name="gender" value="other"> Other
+        <span id="genderError" class="error"></span>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
