@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gender Validation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Gender Validation</h2>
+    <form id="genderForm" action="dob.html" method="get" onsubmit="return validateGender()">
+        <fieldset>
+            <legend>Gender</legend>
+        <div class="gender-options">
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+        </div>
+        <div id="genderError" class="error"></div>
+        <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+
+    <script>
+        function validateGender() {
+            let genderSelected =document.querySelector('input[name="gender"]:checked');
+            let errorElement = document.getElementById("genderError");
+            let isvalid = true;
+
+            errorElement.textContent = '';
+
+            if (!genderSelected) {
+                errorElement.textContent = "Please Select at lest one option";
+                return false;  
+            }
+            return isvalid;
+        }
+    </script>
+</body>
+</html>

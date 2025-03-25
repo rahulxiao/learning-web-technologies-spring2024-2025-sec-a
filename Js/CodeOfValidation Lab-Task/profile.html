@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Picture Validation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Profile Picture Validation</h2>
+    <form id="profileForm" action="success.html" method="get" onsubmit="return validateProfile()">
+        <fieldset>
+            <legend>Profile Picture</legend>
+        <label for="userId">User Id:</label>
+        <input type="text" id="userId" name="userId">
+        <div id="userIdError" class="error"></div>
+        
+        <label for="picture">Picture:</label>
+        <input type="file" id="picture" name="picture">
+        <div id="pictureError" class="error"></div>
+        <hr>
+        <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+
+    <script>
+        function validateProfile() {
+        let userId = document.getElementById("userId").value.trim();
+        let picture = document.getElementById("picture").value.trim();
+        let errorElement = document.getElementById("userIdError");
+        let errorElement1 = document.getElementById("pictureError");
+        let isValid = true;
+
+        errorElement.textContent = '';
+        errorElement1.textContent = '';
+
+        if (userId === '') {
+            errorElement.textContent = "User Id is required";
+            return false;
+        }
+        if (picture === '') {
+            errorElement1.textContent = "Picture is required";
+            return false;
+        }
+        else if (picture.indexOf('.jpg') == -1 && picture.indexOf('.jpeg') == -1 && picture.indexOf('.png') == -1) {
+            errorElement1.textContent = "Invalid picture format";
+            return false;
+        }
+        else if (isNaN(userId) || parseInt(userId) <= 0) {
+            errorElement.textContent = "User Id must be numeric";
+            return false;
+        }
+        return isValid;
+
+        }
+           
+    </script>
+</body

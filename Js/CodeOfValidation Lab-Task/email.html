@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation</title>
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Email Validation</h2>
+    <form id="emailForm" action="gender.html" method="get" onsubmit="return validateEmail()">
+        <fieldset>
+            <legend>Email</legend>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <div class="hint">sample@example.com</div>
+        <div id="emailError" class="error"></div>
+        <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+
+    <script>
+        function validateEmail() {
+            let email = document.getElementById("email").value.trim();
+            let errorElement = document.getElementById("emailError");
+            let isValid = true;
+
+            errorElement.textContent = '';
+            
+            if (email === '') {
+                errorElement.textContent = "Email cannot be empty";
+                return false;
+            }
+            else if (!email.includes('@')) {
+                errorElement.textContent = "Email must contain @";
+                return false;
+            }
+            else if (!email.includes('.')) {
+                errorElement.textContent = "Email must contain .";
+                return false;
+            }
+            else if (email.indexOf('@') > email.lastIndexOf('.')) {
+                errorElement.textContent = "Invalid email";
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

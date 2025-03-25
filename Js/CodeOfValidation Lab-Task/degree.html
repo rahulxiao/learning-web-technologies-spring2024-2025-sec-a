@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Degree Validation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Degree Validation</h2>
+    <form id="degreeForm" action="bloodgroup.html" method="get" onsubmit="return validateDegree()">
+        <fieldset>
+            <legend>Degree</legend>
+        <div class="degree-options">
+            <input type="checkbox" id="ssc" name="degree" value="SSC">
+            <label for="ssc">SSC</label>
+            
+            <input type="checkbox" id="hsc" name="degree" value="HSC">
+            <label for="hsc">HSC</label>
+            
+            <input type="checkbox" id="bsc" name="degree" value="BSc">
+            <label for="bsc">BSc</label>
+        </div>
+        <div id="degreeError" class="error"></div>
+        <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+
+    <script>
+        function validateDegree() {
+            let degreeSelected = document.querySelectorAll('input[name="degree"]:checked');
+            let errorElement = document.getElementById("degreeError");
+            let isValid = true;
+
+            errorElement.textContent = '';
+
+            if (degreeSelected.length === 0) {
+                errorElement.textContent = "Please Select at least one option";
+                return false;
+            }
+            return isValid;
+        }
+    </script>
+</body>
+</html>
